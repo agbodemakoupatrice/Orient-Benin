@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'theme/app_theme.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
-  runApp(const OrientBeninApp());
+  runApp(const OrientBeninApp()); 
 }
 
 class OrientBeninApp extends StatelessWidget {
@@ -10,38 +12,12 @@ class OrientBeninApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Orient-Bénin',
+      title: 'OrientBénin',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        //Vert et Jaune/Orange pour rappeler les couleurs locales
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1A7A4A), //vert Bénin
-        ),
-        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
-        useMaterial3: true, // design moderne
-      ),
-      home: const HomeScreen(),
+      theme: AppTheme.lightTheme,
+      home: const SplashScreen(),
     );
   }
 }
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Orient-Bénin'),
-        backgroundColor: Colors.green,
-      ),
-      body: const Center(
-        child: Text(
-          'Bienvenue sur Orient-Bénin !\nOrientation & Stages',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-      ),
-    );
-  }
-}
+String nomApp = "Orient-Bénin";

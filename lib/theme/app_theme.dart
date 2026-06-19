@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppTheme {
-  //======= Couleurs Principales ========
+  // ===== COULEURS PRINCIPALES =====
   static const Color primaryColor = Color(0xFF1A7A4A); // vert Bénin
   static const Color secondaryColor = Color(0xFFF5A623); // orange/jaune
   static const Color backgroundColor = Color(0xFFF5F5F5); // gris clair
@@ -10,7 +10,7 @@ class AppTheme {
   static const Color greyColor = Color(0xFF9E9E9E); // gris
   static const Color errorColor = Color(0xFFE53935); // rouge erreur
 
-  // ======= Thème Global =====
+  // ===== THÈME GLOBAL =====
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
@@ -24,13 +24,13 @@ class AppTheme {
         elevation: 0,
         centerTitle: true,
         titleTextStyle: TextStyle(
-          fontSize: 20,
+          fontSize: 21,
           fontWeight: FontWeight.bold,
           color: whiteColor,
         ),
       ),
 
-      // Boutons princpaux
+      // Boutons principaux
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: primaryColor,
@@ -43,7 +43,7 @@ class AppTheme {
         ),
       ),
 
-      // champ de texte
+      // Champs de texte
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: whiteColor,
