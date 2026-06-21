@@ -23,4 +23,36 @@ class AppConstants {
   static const String registerRoute = '/register';
   static const String orientationRoute = '/orientation';
   static const String stagesRoute = '/stages';
+
+  //======CONFIGURATION API ET RESEau======
+  //Pour mon telephone
+
+  static const String _localUrl = "http://10.255.57.70:5000";
+  //IP passerelle magique officielle de google pour l'emulateur android virtuel
+
+  static const String _emulatorUrl = "http://10.0.2.2:5000";
+  // Adresse pour d'autre utilisateur sur Railway
+
+  static const String _productionUrl = "https://railway.app";
+
+  // Interrupteur (true= mon pc actuel, false= le cloud plus tard)
+
+  static const bool isDevelopment = true;
+
+  // Interrupteur emulateur (true= emullateur, false= mon telepnone)
+
+  static const bool useEmulator = false;
+
+  // l'url utilisée par toute l'application
+
+  static String get baseUrl {
+    if (!isDevelopment) return _productionUrl;
+    return useEmulator ? _emulatorUrl : _localUrl;
+  }
+
+  //Points d'acces externes de l'api node.js
+
+  static String get apiFilieresRoute => "$baseUrl/api/filieres";
+  static String get apiRegisterRoute => "$baseUrl/api/auth/register";
+  static String get apiLoginRoute => "$baseUrl/api/auth/login";
 }

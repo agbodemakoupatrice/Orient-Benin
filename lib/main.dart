@@ -20,4 +20,3 @@ class OrientBeninApp extends StatelessWidget {
   }
 }
 
-String nomApp = "Orient-Bénin";
